@@ -1,0 +1,25 @@
+.card-container {
+    @include center;
+    @include blur;
+    
+    padding: 10px;
+    border-radius: 5px;
+    
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+
+    max-width: 600px;
+    width: 90%;
+    @include phone{
+        width: 99%;
+    }
+
+    font-family: $font-content;
+    color: white;
+}
+
+.card-title{
+    font-family: $font-header;
+}

@@ -1,0 +1,19 @@
+.form-element:not(:last-child){
+    margin-bottom: 14px;
+}
+
+.form-element-title{
+    margin-bottom: 5px;
+}
+
+.form-element-options{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.form-element-option{
+    @include button;
+    padding: 5px 10px;
+}
