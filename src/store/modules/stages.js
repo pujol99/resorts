@@ -1,10 +1,12 @@
 const state = () => ({
-    stages: ["Welcome"],
+    stages: ["Welcome", "About", "Scene1", "Scene2", "Scene3", "Survey", "Final"],
     currentStageIndex: 0,
     sceneLoading: false,
+    sceneReporting: false,
     scene: null,
     renderer: null,
     gltfScene: null,
+    sceneCamera: 0,
 });
 
 // getters
@@ -17,6 +19,12 @@ const getters = {
     },
     isSceneLoading: state => {
         return state.sceneLoading;
+    },
+    isSceneReporting: state => {
+        return state.sceneReporting;
+    },
+    getSceneCamera: state => {
+        return state.sceneCamera;
     },
     getGLTF: state => {
         return state.gltfScene;
@@ -37,8 +45,9 @@ const actions = {
     nextStage({ commit, getters }) {
         if (!getters.isLastStage) commit("nextStage");
         if (getters.currentStageIsScene) commit("loadingStart");
+        if (getters.isLastStage) commit("saveData");
     },
-    addGLTFScene({commit}, scene){
+    addGLTFScene({ commit }, scene) {
         commit("addToScene", scene);
         commit("setGLTFScene", scene);
     },
@@ -74,6 +83,18 @@ const mutations = {
     },
     loadingEnd(state) {
         state.sceneLoading = false;
+    },
+    reportStart(state) {
+        state.sceneReporting = true;
+    },
+    reportEnd(state) {
+        state.sceneReporting = false;
+    },
+    saveData() {
+        this.dispatch("data/saveData", { root: true });
+    },
+    nextCamera(state) {
+        state.sceneCamera++;
     },
 };
 

@@ -1,6 +1,6 @@
 <template>
     <div v-if="currentScene('Welcome')">
-        <div class="card-container">
+        <div class="card-container card-top">
             <div class="card-title">
                 <h1>{{ getLabel("welcome_title") }}</h1>
             </div>
@@ -11,12 +11,17 @@
                 
             </div>
         </div>
+        <Scene/>
     </div>
 </template>
 
 <script>
+import Scene from "./Scene.vue"
 import { mapGetters } from "vuex";
 export default {
+    components: {
+        Scene
+    },
     computed: {
         ...mapGetters({
             currentScene: "stages/isCurrentStage",
