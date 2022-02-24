@@ -110,6 +110,10 @@ button {
   font-family: "Source Serif 4", sans-serif;
 }
 
+.card-top {
+  top: 20%;
+}
+
 .form-element:not(:last-child) {
   margin-bottom: 14px;
 }
