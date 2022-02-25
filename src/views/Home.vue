@@ -11,20 +11,15 @@
                 
             </div>
         </div>
-        <Scene/>
+        <Mountain/>
     </div>
 </template>
 
 <script>
-import Scene from "../components/Scene.vue"
 import { mapGetters } from "vuex";
 export default {
-    components: {
-        Scene
-    },
     computed: {
         ...mapGetters({
-            currentScene: "stages/isCurrentStage",
             getLabel: "data/getLabel",
         }),
     },

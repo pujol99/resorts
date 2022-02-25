@@ -10,10 +10,14 @@ import { TroisJSVuePlugin } from "troisjs";
 import Loader from "./components/utils/Loader";
 import LoadBlender from "./components/utils/LoadBlender";
 
+// Utils
+import Mountain from "./components/Mountain";
+
 createApp(App)
     .use(store)
     .use(router)
     .use(TroisJSVuePlugin)
     .component("Loader", Loader)
+    .component("Mountain", Mountain)
     .component("LoadBlender", LoadBlender)
     .mount("#app");

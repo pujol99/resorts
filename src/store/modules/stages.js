@@ -16,9 +16,7 @@ const getters = {
 
 // actions
 const actions = {
-    onAppLoad({ commit, getters }) {
-        
-    },
+    onAppLoad({ commit, getters }) {},
     addGLTFScene({ commit }, scene) {
         commit("addToScene", scene);
         commit("setGLTFScene", scene);

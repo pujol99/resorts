@@ -19,7 +19,6 @@ import { mapGetters } from "vuex";
 export default {
     computed: {
         ...mapGetters({
-            currentScene: "stages/isCurrentStage",
             getLabel: "data/getLabel",
         }),
     },

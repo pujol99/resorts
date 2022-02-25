@@ -2,14 +2,14 @@
     <Renderer
         ref="renderer"
         resize="window"
-        orbitCtrl
+        :orbit-ctrl="{ autoRotate: true }"
     >
-        <Camera ref="camera" :position="cameraPosition" :lookAt="cameraLookAt" />
+        <Camera :position="cameraPosition" :lookAt="cameraLookAt" />
         <Scene background="#000000" ref="scene" >
             <Loader
                 ref="loader"
                 :payload="{
-                    blenderSceneName: 'mountains',
+                    blenderSceneName: 'mountains/everest',
                 }"
             />
         </Scene>
@@ -28,7 +28,6 @@ export default {
     mounted() {
         this.scene = this.$refs.scene;
         this.renderer = this.$refs.renderer;
-        this.camera = this.$refs.camera.camera;
 
         this.$store.commit("stages/setScene", this.scene);
         this.$store.commit("stages/setRenderer", this.renderer);
@@ -42,7 +41,6 @@ export default {
     },
     methods: {
         update() {
-            console.log(this.camera.position);
             // if(this.gltf){}
                 // this.gltf.children.filter(child => child.name === "Flights")[0].rotation.z += 0.1
         },
