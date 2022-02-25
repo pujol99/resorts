@@ -12,6 +12,16 @@ const routes = [
         name: "about",
         component: () => import("../views/About.vue"),
     },
+    {
+        path: "/about",
+        name: "about",
+        component: () => import("../views/About.vue"),
+    },
+    {
+        path: "/:mountainName",
+        name: "mountain",
+        component: () => import("../components/Mountain.vue"),
+    },
 ];
 
 export const router = createRouter({

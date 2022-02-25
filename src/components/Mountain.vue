@@ -9,7 +9,7 @@
             <Loader
                 ref="loader"
                 :payload="{
-                    blenderSceneName: 'mountains/everest',
+                    blenderSceneName: `mountains/${$route.params.mountainName}`,
                 }"
             />
         </Scene>

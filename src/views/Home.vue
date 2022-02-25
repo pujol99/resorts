@@ -11,7 +11,7 @@
                 
             </div>
         </div>
-        <Mountain/>
+        <Mountains/>
     </div>
 </template>
 
