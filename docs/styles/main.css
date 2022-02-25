@@ -38,39 +38,19 @@ button {
   border-style: none;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 #app {
   width: 100%;
   height: 100%;
   background-color: black;
 }
 
-.continueButton {
-  font-size: 18px;
-  width: 100%;
-  padding: 8px 0px;
-  letter-spacing: 0.4px;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 3px 5px -1px, rgba(0, 0, 0, 0.14) 0 6px 10px 0, rgba(0, 0, 0, 0.12) 0 1px 18px 0;
-          box-shadow: rgba(0, 0, 0, 0.2) 0 3px 5px -1px, rgba(0, 0, 0, 0.14) 0 6px 10px 0, rgba(0, 0, 0, 0.12) 0 1px 18px 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-  cursor: pointer;
-  border-radius: 5px;
-  font-family: "Fira Code", sans-serif;
-  background-color: #fffcf2;
-  color: #252422;
-}
-
-@media (hover: hover) {
-  .continueButton:hover {
-    background: #252422;
-    color: #fffcf2;
-  }
-}
-
 .selected {
-  background: #252422 !important;
+  background: #ade8f4 !important;
   color: #fffcf2 !important;
 }
 
@@ -143,13 +123,48 @@ button {
   border-radius: 5px;
   font-family: "Fira Code", sans-serif;
   background-color: #fffcf2;
-  color: #252422;
+  color: #ade8f4;
   padding: 5px 10px;
 }
 
 @media (hover: hover) {
   .form-element-option:hover {
-    background: #252422;
+    background: #ade8f4;
+    color: #fffcf2;
+  }
+}
+
+nav {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  top: 90%;
+  font-family: "Fira Code", sans-serif;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 30px;
+}
+
+nav a {
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  cursor: pointer;
+  border-radius: 5px;
+  font-family: "Fira Code", sans-serif;
+  background-color: #fffcf2;
+  color: #ade8f4;
+  padding: 10px 15px;
+  background-color: #000814;
+  border-radius: 5px;
+}
+
+@media (hover: hover) {
+  nav a:hover {
+    background: #ade8f4;
     color: #fffcf2;
   }
 }
