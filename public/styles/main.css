@@ -44,31 +44,6 @@ button {
   background-color: black;
 }
 
-.continueButton {
-  font-size: 18px;
-  width: 100%;
-  padding: 8px 0px;
-  letter-spacing: 0.4px;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 3px 5px -1px, rgba(0, 0, 0, 0.14) 0 6px 10px 0, rgba(0, 0, 0, 0.12) 0 1px 18px 0;
-          box-shadow: rgba(0, 0, 0, 0.2) 0 3px 5px -1px, rgba(0, 0, 0, 0.14) 0 6px 10px 0, rgba(0, 0, 0, 0.12) 0 1px 18px 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-  cursor: pointer;
-  border-radius: 5px;
-  font-family: "Fira Code", sans-serif;
-  background-color: #fffcf2;
-  color: #252422;
-}
-
-@media (hover: hover) {
-  .continueButton:hover {
-    background: #252422;
-    color: #fffcf2;
-  }
-}
-
 .selected {
   background: #252422 !important;
   color: #fffcf2 !important;

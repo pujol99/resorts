@@ -1,5 +1,5 @@
 <template>
-    <div v-if="currentScene('Welcome')">
+    <div>
         <div class="card-container card-top">
             <div class="card-title">
                 <h1>{{ getLabel("welcome_title") }}</h1>
@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import Scene from "./Scene.vue"
+import Scene from "../components/Scene.vue"
 import { mapGetters } from "vuex";
 export default {
     components: {

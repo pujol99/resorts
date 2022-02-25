@@ -45,6 +45,10 @@ export default {
                 .filter(child => child.name.includes("Light"))
                 .forEach(child => child.material = lightMaterial);
 
+            gltf.scene.scale.x = 0.2;
+            gltf.scene.scale.y = 0.2;
+            gltf.scene.scale.z = 0.2;
+
             this.addScene(gltf.scene);
 
             this.isLoaded = true;

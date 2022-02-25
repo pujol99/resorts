@@ -1,17 +1,16 @@
 <template>
-    <Welcome />
+    <nav>
+        <router-link to="/">Welcome</router-link>
+        <router-link to="/about">About</router-link>
+    </nav>
+    <router-view />
 </template>
 
 <script>
-import Welcome from "./views/Welcome.vue";
-
 export default {
     name: "App",
-    components: {
-        Welcome,
-    },
     mounted() {
-        this.$store.dispatch("stages/onAppLoad")
+        this.$store.dispatch("stages/onAppLoad");
     },
 };
 </script>
