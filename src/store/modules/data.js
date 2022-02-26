@@ -1,4 +1,5 @@
 import { labels } from "./labels";
+import { mountains } from "./mountains";
 
 const state = () => ({
     languages: {
@@ -20,6 +21,11 @@ const getters = {
         return Object.keys(state.languages).find(key => state.languages[key] === state.language);
     },
     //data
+    getMountain: state => mountain => {
+        if (!mountains[mountain]) return "No mountain";
+
+        return mountains[mountain];
+    }
 };
 
 // actions

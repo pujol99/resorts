@@ -20,7 +20,7 @@ const routes = [
     {
         path: "/:mountainName",
         name: "mountain",
-        component: () => import("../components/Mountain.vue"),
+        component: () => import("../components/mountain/Mountain.vue"),
     },
 ];
 

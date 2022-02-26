@@ -49,6 +49,11 @@ a {
   background-color: black;
 }
 
+.info {
+  color: white;
+  font-family: "Source Serif 4", sans-serif;
+}
+
 .selected {
   background: #ade8f4 !important;
   color: #fffcf2 !important;
@@ -135,12 +140,6 @@ a {
 }
 
 nav {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  top: 90%;
   font-family: "Fira Code", sans-serif;
   color: white;
   display: -webkit-box;
@@ -150,21 +149,7 @@ nav {
 }
 
 nav a {
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-  cursor: pointer;
-  border-radius: 5px;
-  font-family: "Fira Code", sans-serif;
-  background-color: #fffcf2;
-  color: #ade8f4;
   padding: 10px 15px;
-  background-color: #000814;
-  border-radius: 5px;
-}
-
-@media (hover: hover) {
-  nav a:hover {
-    background: #ade8f4;
-    color: #fffcf2;
-  }
+  background-color: #fffcf2;
+  color: #000814;
 }

@@ -11,7 +11,8 @@ import Loader from "./components/utils/Loader";
 import LoadBlender from "./components/utils/LoadBlender";
 
 // Utils
-import Mountain from "./components/Mountain";
+import MountainVisuals from "./components/mountain/MountainVisuals";
+import MountainInfo from "./components/mountain/MountainInfo";
 import Mountains from "./components/Mountains";
 
 createApp(App)
@@ -19,7 +20,8 @@ createApp(App)
     .use(router)
     .use(TroisJSVuePlugin)
     .component("Loader", Loader)
-    .component("Mountain", Mountain)
+    .component("MountainVisuals", MountainVisuals)
+    .component("MountainInfo", MountainInfo)
     .component("Mountains", Mountains)
     .component("LoadBlender", LoadBlender)
     .mount("#app");

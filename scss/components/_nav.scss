@@ -1,14 +1,11 @@
 nav{
-    @include center;
-    top: 90%;
     font-family: $font-content;
     color: white;
     display: flex;
     gap: 30px;
     a{ 
-        @include button;
         padding: 10px 15px;
-        background-color: $color1;
-        border-radius: 5px;
+        background-color: $color0;
+        color: $color1;
     }
 }
